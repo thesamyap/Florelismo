@@ -1,0 +1,117 @@
+/*Importarcion de fuentes*/
+@font-face{
+	font-family: "WebSymbolsRegular";
+	src: url('fonts/websymbols-regular-webfont.eot');
+	src: url('fonts/websymbols-regular-webfont.eot?#iefix') format('embedded-opentype'),
+		 url('fonts/websymbols-regular-webfont.woff') format('woff'),
+		 url('fonts/websymbols-regular-webfont.ttf') format('truetype'),
+		 url('fonts/websymbols-regular-webfont.svg#WebSymbolsRegular') format('svg');
+	font-style: normal;
+	font-weight: normal;
+}
+
+/*Estilos generales*/
+*{
+	padding: 0px;
+	margin: 0px;
+	font-family: "Oswald";
+}
+
+#contact-box{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
+
+#boximg{
+	width: 50%;
+	min-height: 550px;
+	margin: 40px;
+	float: right;
+	box-shadow: 1px 2px 2px gray;
+	background-image: url(img/cont/banne.jpg);
+	background-position: revert;
+	border-radius: 30px;
+	animation: backBanner 10s linear;
+}
+
+@keyframes backBanner{
+	0%{
+		background-position: -200px -150px;
+	}
+	100%{
+		background-position: 0px 0px;
+	}
+}
+
+#boxinfo{
+	background-color: #f4f1ef;
+	min-height: 480px;
+	border-radius: 5px;
+}
+
+h2{
+	position: relative;
+	padding-bottom: 10px;
+	margin-bottom: 10px;
+}
+
+h2:after{
+	content: '';
+	position: absolute;
+	left: 50%;
+	bottom: 0;
+	transform: translateX(-50%);
+	height: 4px;
+	width: 50px;
+	border-radius: 2px;
+	background-color: #98666a;
+}
+
+.field{
+	width: 90%;
+	outline: none;
+	border: 2px solid rgba(0, 0, 0, 0);
+	background-color: rgba(230, 230, 230, 0.6);
+	font-size: 1.1rem;
+	margin-bottom: 22px;
+	transition: .300s;
+}
+
+.area{
+	min-height: 150px;
+}
+
+.field:hover{
+	background-color: rgba(0, 0, 0, 0.1);
+}
+
+.field:focus{
+	background-color: #f9e1e2;
+	border: 2px solid rgba(163, 96, 109, 0.45);
+}
+
+.btn{
+	width: 30%;
+	padding: 10px;
+	background-color: #f9e1e2;
+	border: 2px solid rgba(163, 96, 109, 0.45)
+}
+
+.btn:hover{
+	background-color: #be787b;
+}
+
+/*Responsives*/
+@media (max-width: 800px){
+	#boximg{
+		display: none;
+	}
+	#contact-box{
+		padding-top: 40px;
+	}
+}
+
+
+

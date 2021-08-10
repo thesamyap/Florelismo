@@ -1,0 +1,245 @@
+.container{
+	width: 100%;
+}
+
+.layaut{
+	display: flex;
+	position: relative;
+	width: 100%;
+	overflow: hidden;
+}
+
+.layaut .contentBx{
+	background: #162c3b;
+	padding: 100px;
+	width: 50%;
+}
+
+.titulo{
+	color: white;
+	font-family: "Oswald";
+	font-size: 30px;
+	font-weight: 100;
+	letter-spacing: 1px;
+	margin-bottom: 10px;
+}
+
+#titulo1{
+	animation: sombra 3s;
+	text-shadow: 5px 5px 10px white;
+}
+
+@keyframes sombra{
+	0%{
+		opacity: 0;
+		color: gray;
+		transform: translateX(-100%);
+	}
+	50%{
+		opacity: 0;
+		text-shadow: 0px 0px 0px white;
+	}
+	100%{
+		color: white;
+		text-shadow: 5px 5px 10px white;
+	}
+}
+
+#text1,
+#text3{
+	animation: reloj 2s;
+}
+
+@keyframes reloj{
+	0%{
+		transform: rotateZ(-150deg) translate(500px, 150px);
+		opacity: 0;
+	}
+	50%{
+		opacity: 0;
+	}
+	100%{
+		color: white;
+	}
+}
+
+.layaut .imgBx{
+	background: url(img/historia/1.jpg);
+	width: 50%;
+	background-size: cover;
+	background-position: center;
+	animation: cascada 3s;
+}
+
+@keyframes cascada{
+	0%{
+		opacity: 0;
+		transform: translateY(-200%);
+		filter: invert(1);
+	}
+}
+
+
+/*Parte 2*/
+.laybar{
+	display: flex;
+	flex-direction: column;
+	position: relative;
+	width: 100%;
+	overflow: hidden;
+}
+
+.laybar .contentBr{
+	background: #e0bbad;
+	padding: 100px;
+	width: 100%;
+	
+	animation: cascada 4s;
+}
+
+.contentBr .text{
+	color: #26252d;
+}
+
+.laybar .imgBr{
+	background: #e9d3c4;
+	padding: 100px;
+	animation: cascadaDos 4s;
+}
+
+@keyframes cascadaDos{
+	0%{
+		opacity: 0;
+		transform: translateY(200%);
+	}
+	100%{
+		transform: translateY(0%);
+	}
+}
+
+#titulo2{
+	animation: sombraDos 5s;
+	text-shadow: 3px 7px 8px #26252d;
+	display: flex;
+	justify-content: center;
+	color: #26252d;
+}
+
+@keyframes sombraDos{
+	0%{
+		opacity: 0;
+		transform: translateX(100%);
+	}
+}
+
+/*Parte 3*/
+.imgBr{
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+	flex-basis: 75%;
+}
+
+.imgBr .caja{
+	flex-grow: 1;
+	flex-basis: 250px;
+	margin-bottom: 25px;
+	margin-right: 20px;
+	border: 1px solid #ccc;
+	background: #e0bbad;
+	border-radius: 15px;
+}
+
+.imgBr img{
+	width: 100%;
+	border-radius: 15px 15px 0px 0px;
+}
+
+.caja-info{
+	text-align: center;
+	color: white;
+	padding: 10px;
+}
+
+.caja-info h3{
+	font-size: 24px;
+	font-family: "Oswald";
+	letter-spacing: 1px;
+	color: #162c3b;
+}
+
+.caja-info p{
+    color: #162c3b;
+    font-size: 18px;
+    font-family: sans-serif;
+    padding-bottom: 15px;
+}
+
+/*Parte 4*/
+#cambioC{
+	order: 10;
+}
+
+#cambioI{
+	order: 2;
+}
+
+#titulo3{
+	animation: sombra 3s;
+	display: flex;
+	justify-content: center;
+	text-shadow: 5px 5px 10px white;
+}
+
+#imgBz{
+	background: url(img/historia/5.jpg);
+	width: 50%;
+	background-size: cover;
+	background-position: center;
+	animation: cascada 3s;
+}
+
+
+/*Responsives*/
+
+@media(max-width: 970px){
+	.layaut .contentBx,
+	.laybar .contentBr{
+		padding: 50px;
+	}
+
+}
+
+@media(max-width: 790px){
+	.layaut{
+		display: flex;
+		position: relative;
+		width: 100%;
+		overflow: hidden;
+	}
+
+	.layaut .contentBx{
+		background: #162c3b;
+		padding: 60px;
+		width: 100%;
+	}
+
+	.imgBx{
+		display: none;
+	}
+
+	.text {
+    	font-size: 19px;
+	}
+}
+
+@media(max-width: 510px){
+	.laybar .imgBr {
+	    padding: 20px;
+	}
+
+	.imgBr .caja {
+	    margin-right: 0px;
+	}
+}
+
